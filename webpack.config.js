@@ -6,11 +6,10 @@ module.exports = {
     path: path.resolve(__dirname, "."),
     filename: "extension.js",
     library: {
-      type: "module",
+      type: "umd",
+      name: "SubjournalsExtension",
     },
-  },
-  experiments: {
-    outputModule: true,
+    globalObject: "this",
   },
   module: {
     rules: [
@@ -27,9 +26,9 @@ module.exports = {
     ],
   },
   externals: {
-    // Use global variables that Roam provides
-    react: "globalThis.React",
-    "react-dom": "globalThis.ReactDOM",
+    // These will use the global variables Roam provides
+    react: "React",
+    "react-dom": "ReactDOM",
   },
   resolve: {
     alias: {
@@ -40,4 +39,5 @@ module.exports = {
     },
   },
   mode: "production",
+  target: "web",
 };

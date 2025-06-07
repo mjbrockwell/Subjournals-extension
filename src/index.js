@@ -377,7 +377,7 @@ const checkCurrentPage = () => {
 };
 
 // 🚀 PROFESSIONAL EXTENSION EXPORT
-export default runExtension(async ({ extensionAPI }) => {
+module.exports = runExtension(async ({ extensionAPI }) => {
   // Professional CSS injection with automatic cleanup
   const styleElement = addStyle(
     `
