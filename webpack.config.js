@@ -26,8 +26,8 @@ module.exports = {
     ],
   },
   externals: {
-    react: "window.React",
-    "react-dom": "window.ReactDOM"
+    react: "React",
+    "react-dom": "ReactDOM"
   },
   resolve: {
     alias: {
