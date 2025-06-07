@@ -1,4 +1,10 @@
 // Professional Subjournals Extension using roamjs-components
+// Safety check for required globals
+if (typeof window === 'undefined' || !window.React || !window.ReactDOM) {
+  console.error('Subjournals Extension: Required dependencies (React/ReactDOM) not found in global scope');
+  throw new Error('Required dependencies not found');
+}
+
 import runExtension from "roamjs-components/util/runExtension";
 import createHTMLObserver from "roamjs-components/dom/createHTMLObserver";
 import addStyle from "roamjs-components/dom/addStyle";
