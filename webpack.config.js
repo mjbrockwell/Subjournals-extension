@@ -26,9 +26,11 @@ module.exports = {
     ],
   },
   externals: {
-    // These will use the global variables Roam provides
+    // Both React and ReactDOM should be external
     react: "React",
     "react-dom": "ReactDOM",
+    // Add roamjs-components as external since it's provided by Roam
+    "roamjs-components": "roamjs-components"
   },
   resolve: {
     alias: {
