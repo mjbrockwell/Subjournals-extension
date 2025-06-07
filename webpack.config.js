@@ -27,8 +27,7 @@ module.exports = {
   },
   externals: {
     react: "window.React",
-    "react-dom": "window.ReactDOM",
-    "roamjs-components": "window.roamjsComponents"
+    "react-dom": "window.ReactDOM"
   },
   resolve: {
     alias: {
