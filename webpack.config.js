@@ -27,13 +27,12 @@ module.exports = {
     ],
   },
   externals: {
-    // Don't bundle these - Roam provides them globally
-    react: "React",
-    "react-dom": "ReactDOM",
+    // Use global variables that Roam provides
+    react: "globalThis.React",
+    "react-dom": "globalThis.ReactDOM",
   },
   resolve: {
     alias: {
-      // Help webpack find roamjs-components
       "roamjs-components": path.resolve(
         __dirname,
         "node_modules/roamjs-components"
